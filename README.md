@@ -3,7 +3,7 @@ My name is Tuan Anh Nguyen. I am an university student. I am interested in the f
 
 ## 📫 How to reach me: 
 
-[![Facebook](https://github.com/anhnt02hp/anhnt02hp/blob/main/facebook-logo.png) anhnt02hp](https://www.facebook.com/anhnt02)  [![Linkedin](https://i.stack.imgur.com/gVE0j.png) anhnt02hp]()  [![GitHub](https://i.stack.imgur.com/tskMh.png) anhnt02hp](https://github.com/anhnt02hp)  
+[![Facebook](https://github.com/anhnt02hp/anhnt02hp/blob/main/facebook-logo.png) anhnt02hp](https://www.facebook.com/anhnt02)  [![Linkedin](https://i.stack.imgur.com/gVE0j.png) anhnt02hp](https://www.linkedin.com/in/anhnt02hp/)  [![GitHub](https://i.stack.imgur.com/tskMh.png) anhnt02hp](https://github.com/anhnt02hp)  
 
 
 [![Tuan Anh Nguyen's github stats-Light](https://github-readme-stats.vercel.app/api?username=anhnt02hp&show_icons=true&theme=shadow_green&hide=contribs,prs,issues#gh-light-mode-only)](https://github.com/anuraghazra/github-readme-stats#gh-light-mode-only)

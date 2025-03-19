@@ -2,7 +2,7 @@
 My name is Tuan Anh Nguyen. I am an university student. I am interested in the following topics: Deep Learning in NLP and Computer Vision. Reinforcement Learning.<br>
 ## 📫 How to reach me: 
 
-[![Linkedin](https://i.stack.imgur.com/gVE0j.png) anhnt02hp]()  [![GitHub](https://i.stack.imgur.com/tskMh.png) anhnt02hp](https://github.com/anhnt02hp)
+[![Linkedin](https://i.stack.imgur.com/gVE0j.png) anhnt02hp]()  [![GitHub](https://i.stack.imgur.com/tskMh.png) anhnt02hp](https://github.com/anhnt02hp)  [![Facebook]() anhnt02hp](https://www.facebook.com/anhnt02)
 
 
 [![Tuan Anh Nguyen's github stats-Light](https://github-readme-stats.vercel.app/api?username=anhnt02hp&show_icons=true&theme=shadow_green&hide=contribs,prs,issues#gh-light-mode-only)](https://github.com/anuraghazra/github-readme-stats#gh-light-mode-only)

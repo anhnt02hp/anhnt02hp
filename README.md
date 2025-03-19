@@ -1,5 +1,6 @@
 ### WELCOME TO MY PAGE 👋👋👋
-My name is Tuan Anh Nguyen. I am an university student. I am interested in the following topics: Deep Learning in NLP and Computer Vision. Reinforcement Learning.<br>
+My name is Tuan Anh Nguyen. I am an university student. I am interested in the following topics: Basic Machine Learning, Deep Learning in NLP and Computer Vision.
+
 ## 📫 How to reach me: 
 
 [![Facebook](https://github.com/anhnt02hp/anhnt02hp/blob/main/facebook-logo.png) anhnt02hp](https://www.facebook.com/anhnt02)  [![Linkedin](https://i.stack.imgur.com/gVE0j.png) anhnt02hp]()  [![GitHub](https://i.stack.imgur.com/tskMh.png) anhnt02hp](https://github.com/anhnt02hp)  

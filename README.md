@@ -16,5 +16,16 @@ My name is Tuan Anh Nguyen. I am an university student. I am interested in the f
 <a href="https://github.com/anhnt02hp/CS229-Fall2018-FullCourse#gh-dark-mode-only">
   <img align="center" src="https://github-readme-stats.anuraghazra1.vercel.app/api/pin/?username=anhnt02hp&repo=CS229-Fall2018-FullCourse&theme=nord&title_color=bddfff" />
 </a>
+    <!--------------------->
+
+  <!-- 2nd Repository`  -->
+<a href="https://github.com/anhnt02hp/AI-Scientific-Middleware#gh-light-mode-only">
+  <img align="center" src="https://github-readme-stats.anuraghazra1.vercel.app/api/pin/?username=anhnt02hp&repo=AI-Scientific-Middleware&theme=swift&icon_color=f05237&title_color=000000&text_color=504B38&border_color=000000" />
+</a>    
+<a href="https://github.com/anhnt02hp/AI-Scientific-Middleware#gh-dark-mode-only">
+  <img align="center" src="https://github-readme-stats.anuraghazra1.vercel.app/api/pin/?username=anhnt02hp&repo=AI-Scientific-Middleware&theme=nord&title_color=bddfff" />
+</a>
+    <!--------------------->
+
 
 

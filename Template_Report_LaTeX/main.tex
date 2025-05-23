@@ -1,0 +1,362 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc} 
+\usepackage[fontsize=13pt]{scrextend} %Font size
+\usepackage[paperheight=29.7cm, paperwidth=21cm, right=2cm, left=3cm, top=2cm, bottom=2.5cm]{geometry} %Can le
+\usepackage{mathptmx} %Time-New-Roman
+\usepackage{graphicx} %Allow insert image
+\usepackage{float} %Set insert image location
+\usepackage{tikz} %draw cover frame
+\usetikzlibrary{calc} %tikz library
+
+\usepackage{indentfirst} %Thu vien thut dau dong
+\renewcommand{\baselinestretch}{1.2} %Gian dong 1.2
+\setlength{\parskip}{6pt} %Gian dong giua cac doan van
+\setlength{\parindent}{1cm} %Set khoang cach thut dau dong moi doan
+
+\usepackage{titlesec} %Thu vien set up cac kieu chu
+%Heading 1
+\titlespacing*{\section}{0pt}{0pt}{30pt} 
+\titleformat*{\section}{\fontsize{16pt}{0pt}\selectfont \bfseries \centering}
+%Heading 2
+\titlespacing*{\subsection}{0pt}{10pt}{0pt} 
+\titleformat*{\subsection}{\fontsize{14pt}{0pt}\selectfont \bfseries}
+%Heading 3
+\titlespacing*{\subsubsection}{0pt}{10pt}{0pt} 
+\titleformat*{\subsubsection}{\fontsize{13pt}{0pt}\selectfont \bfseries \itshape}
+%Heading 4
+\setcounter{secnumdepth}{4}
+\titlespacing*{\paragraph}{0pt}{10pt}{0pt} 
+\titleformat*{\paragraph}{\fontsize{13pt}{0pt}\selectfont \itshape}
+
+
+%Figure
+\renewcommand{\figurename}{\fontsize{12pt}{0pt}\selectfont \bfseries Figure}
+\renewcommand{\thefigure}{\thesection.\arabic{figure}}
+\usepackage{caption}
+\captionsetup[figure]{labelsep=space} %Xoa dau :
+
+%Table
+\renewcommand{\tablename}{\fontsize{12pt}{0pt}\selectfont \bfseries Table}
+\renewcommand{\thetable}{\thesection.\arabic{table}}
+\usepackage{caption}
+\captionsetup[table]{labelsep=space} %Xoa dau :
+
+\usepackage{tabularx}
+\newcolumntype{s}{>{\hsize=.4\hsize\centering\arraybackslash}X}
+\newcolumntype{a}{>{\hsize=1.1\hsize\centering\arraybackslash}X}
+
+%Function
+\renewcommand{\theequation}{\thesection.\arabic{equation}} %Thay doi danh so function
+
+%Theorem
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{defn}[theorem]{Definition}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{lemma}[theorem]{Lemma}
+
+\usepackage{lipsum} %Thu vien tao chu linh tinh
+
+%Change header name
+\renewcommand{\contentsname}{CONTENTS}
+\renewcommand{\listfigurename}{LIST OF FIGURES}
+\renewcommand{\listtablename}{LIST OF TABLES}
+\renewcommand{\refname}{REFERENCES}
+
+%Auto go to
+\usepackage[unicode]{hyperref}
+
+
+\begin{document}
+%Frame
+\begin{titlepage}
+\begin{tikzpicture}[overlay, remember picture]
+\draw[line width=3pt]
+    ($ (current page.north west) + (3.0cm, -2.0cm) $)
+    rectangle
+    ($ (current page.south east) + (-2.0cm, 2.5cm) $);
+\draw[line width=0.5pt]
+    ($ (current page.north west) + (3.1cm, -2.1cm) $)
+    rectangle
+    ($ (current page.south east) + (-2.1cm, 2.6cm) $);
+\end{tikzpicture}
+
+%University name
+\begin{center}
+\vspace{-12pt} UNIVERSITY OF SCIENCE AND TECHNOLOGY OF HANOI \\
+\textbf{\fontsize{13pt}{0pt}\selectfont UNDERGRADUATED STUDENT}
+
+%USTH Logo
+\vspace{0.5cm}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=3.70in, height=1.86in]{Images/usth_logo.png}
+\end{figure}
+
+%Bachelor thesis + name student + major
+\vspace{1.5cm}
+\textbf{\fontsize{28pt}{0pt}\selectfont BACHELOR THESIS \\}
+\vspace{12pt}
+\fontsize{13pt}{0pt}\selectfont by \\
+\vspace{12pt}
+\textbf{\fontsize{13pt}{0pt}\selectfont Nguyen Tuan Anh - BA11-007 \\}
+\vspace{6pt}
+\textbf{\fontsize{13pt}{0pt}\selectfont Information and Communication Technology \\}
+
+%Thesis Title
+\vspace{1.5cm}
+\fontsize{13pt}{0pt}\selectfont Thesis Title: \\
+\vspace{12pt}
+\textbf{\fontsize{24pt}{0pt}\selectfont A middleware framework \\}
+\vspace{12pt}
+\textbf{\fontsize{24pt}{0pt}\selectfont to support scientific generation \\}
+\vspace{6pt}
+\textbf{\fontsize{24pt}{0pt}\selectfont using an AI approach \\}
+
+%Supervisor
+\vspace{2cm}
+\textit{\fontsize{13pt}{0pt}\selectfont Supervisor: \\}
+\vspace{12pt}
+\textbf{\fontsize{16pt}{0pt}\selectfont Ms. Le Nhu Chu Hiep \\}
+
+%Date
+\vspace{2.5cm}
+\fontsize{13pt}{0pt}\selectfont Hanoi, 2025
+\end{center}
+\end{titlepage}
+\cleardoublepage
+
+%Acknowledgement
+\thispagestyle{empty} %Delete number page
+\section*{Acknowledgement}
+First and foremost, I would like to express my deepest and most sincere gratitude to Ms. Le Nhu Chu Hiep, my supervisor, who has guide and supported me throughout my internship. Not only knowledge but also the lifestyle, thanks to him, I grow up everyday and overcome all challenges. Under his guidance, I gradually improved myself and achieved remarkable academic achievements. I am immensely grateful for everything he has done for me.
+
+I would also thanks to the University of Science and Technology of Hanoi (USTH) - the place that has become my youth. USTH has educated and trained me, helping me grow and develop every day. The memories and lessons learned here will always be valuable assets in my life.
+
+Especially, I want to express my heartfelt thanks to my love, Khanh Linh. You have always been by my side, supporting and encouraging me throughout the project. I remember each delicious meals you cooked for me and your words of encouragement have given me the huge confidence and motivation to complete all my work. You are my most emotional support, I am deeply thankful for that.
+
+I also want to send my deepest gratitude to my mother and grandmother. Thanks to their guidance and teachings over the past 20 years, I have been able to grow up to be who I am today. Their love and sacrifices have been a great source of motivation for me to overcome all challenges.
+
+Finally, I want to thank my late father, who passed away not long ago. Although he is no longer with us, his teachings and love continue to be a source of encouragement and strength for me to keep striving.
+\cleardoublepage
+
+%Loi cam doan
+\thispagestyle{empty}
+\section*{Declaration}
+My name is Nguyen Tuan Anh, ID: BA11-007, a third-year student majoring in Information and Communication Technology at the University of Science and Technology of Hanoi (USTH). My supervisor is Ms. Le Nhu Chu Hiep.
+
+I hereby declare that the entire content presented in this thesis, titled “A middleware framework to support scientific generation using an AI approach” is the result of my own research and study. All data presented in this thesis is truthful and reflects the actual results from practical implementation.
+
+All quoted information follows intellectual property rules, and the references are clearly listed. I take full responsibility for all the contents written in this thesis.
+
+\vspace{6pt}
+\hspace{9.2cm} Hanoi, July 2025
+
+\hspace{10cm} \textbf{Declarant}
+
+\vspace{2cm}
+\hspace{8.65cm} \textbf{NGUYEN TUAN ANH}
+\cleardoublepage
+
+%Table of Contents
+\addtocontents{toc}{\protect \thispagestyle{empty}}
+\tableofcontents
+\thispagestyle{empty}
+\cleardoublepage
+
+%Abbreviations
+\pagenumbering{roman} %Page number i,ii,iii,...
+\section*{Abbreviations}
+\phantomsection \addcontentsline{toc}{section}{\numberline {} Abbreviations}
+\cleardoublepage
+
+%List of Figures
+{
+\let\oldnumberline\numberline
+\renewcommand{\numberline}{\figurename~\oldnumberline}
+\listoffigures
+}
+\phantomsection \addcontentsline{toc}{section}{\numberline {} List of Figures}
+\cleardoublepage
+
+%List of Tables
+{
+\let\oldnumberline\numberline
+\renewcommand{\numberline}{\tablename~\oldnumberline}
+\listoftables
+}
+\phantomsection \addcontentsline{toc}{section}{\numberline {} List of Tables}
+\cleardoublepage
+
+%Abstract
+\section*{Abstract}
+\addcontentsline{toc}{section}{\numberline {} Abstract}
+Phan nay nhung muc dich va luat quan trong nhat cua do an bang ca tieng viet va tieng anh
+\cleardoublepage
+
+%Thesis contents-----------------------------------------------------------------------------
+\pagenumbering{arabic} %Page number 1,2,3...
+%CHAPTER 1: INTRODUCTION
+\section*{INTRODUCTION}
+\phantomsection \addcontentsline{toc}{section}{\numberline{} INTRODUCTION}
+Phan mo dau gioi thieu van de ma do an can gioi thieu, mo ta duoc cac phuong phap hien co de giai quyet van de, trinh bay muc dich cua do an song song voi viec gioi han pham vi van de ma do an tap trung giai quyet. Phan nay cung se tom tat cau truc do an va noi dung tuong ung cua cac phan se lan luot duoc trinh bay o cac chuong tiep theo.
+
+Noi dung chinh cua 1 do an tot nghiep bao gom:
+\begin{itemize}
+    \item Phan mo dau gioi thieu de tai
+    \item Mot chuong gioi thieu co so ly thuyet
+    \item Mot hoac nhieu chuong trinh bay van de ve tinh toan va thiet ke
+    \item Mot chuong mo ta cac thi nghiem va ket qua thu duoc
+\end{itemize}
+\newpage
+
+%CHAPTER 2: CO SO LY THUYET
+\section*{CHUONG 2. CO SO LY THUYET}
+\phantomsection \addcontentsline{toc}{section}{\numberline{} CHUONG 2. CO SO LY THUYET}
+\setcounter{section}{2}
+\setcounter{subsection}{0}
+Moi chuong se bat dau bang 1 doan gioi thieu cac phan chinh duoc trinh bay trong chuong do, dai khoang 5-10 dong va ket thuc bang mot doan tom tat cac ket luan chinh cua chuong. Chu y phan bo chieu dai moi\cite{watanabe2002theoretical} chuong cho can doi va hop ly.
+\subsection{Mot so luu y khi trinh bay do an}
+Sau day la 1 vai chu y khi lam do an cac ban can nho nhe:
+\subsubsection{Nop do an}
+Sinh vien (hoac nhom sinh vien toi da 3 thanh vien lam chung mot de tai) nop 2 quyen do an tot nghiep tai van phong bo mon cua giang vien huong dan truoc ngay bao ve it nhat 1 tuan. Mot quyen do an can co cac dac diem sau:
+\begin{itemize}
+    \item Duoc \textbf{in 2 mat} nham tiet kiem khong gian luu tru
+    \item Dong bia mem, ben ngoai la bong kinh
+    \item So trang 50-150 trang, khong ke phan phu luc
+    \item Phai co chu ky cua sinh vien sau loi cam doan va cua giang vien huong dan.
+\end{itemize}
+\subsubsection{Phu luc}
+Phu luc (neu co) chua cac thong tin co lien quan toi do an nhung neu o trong cac phan chinh se gay ruom ra. Thong thuong cac chi tiet duoc de trong phan phu luc la cac ket qua tho (chua qua xu ly), ma nguon phan mem, thong so ky thuat chi tiet cua linh kien, hinh anh minh hoa them,...vv..v
+\subsubsection{Tai lieu tham khao}
+\paragraph{Cach liet ke}\mbox{}
+
+Ap dung cach liet ke theo quy dinh cua IEEE. Theo do tai lieu tham khao duoc danh so thu tu trong ngoac vuong. Thu tu liet ke la thu tu xuat hien cua tai lieu tham khao duoc trich dan trong do an. Tai lieu tham khao da liet ke bat buoc phai duoc trich dan trong phan noi dung cua do an. Tai lieu tham khao can co nguon goc ro rang va tu nguon dang tin cay. Han che trich dan tai lieu tham khao tu cac website, wikipedia
+\paragraph{Cac loai tai lieu tham khao}\mbox{}
+
+Cac nguon tai lieu tham khao chinh la Sach, Bai bao trong cac tap chi, Bai bao trong cac hoi nghi khoa hoc va cac tai lieu tham khao khac tren internet.
+
+\subsubsection{Danh so phuong trinh}
+Phuong trinh duoc danh so theo cua chuong, nhu hinh ve va bang bieu va can phai giai thich function do ra chu khong duoc de nguyen
+
+\subsubsection{Danh so dinh nghia, dinh ly, he qua}
+Cac dinh nghia, dinh ly, he qua se duoc danh so theo so cua chuong va duoc su dung chung 1 chi so. VD: Trong chuong 3, cac dinh nghia, dinh ly, he qua se duoc danh so theo thu tu nhu sau: Dinh ly 3.1, Dinh nghia 3.2, He qua 3.3, Dinh ly 3.4,...
+\newpage
+
+%CHAPTER 3
+\section*{CHUONG 3. THUAT TOAN}
+\addcontentsline{toc}{section}{\numberline{} CHUONG 3. THUAT TOAN}
+\setcounter{section}{3}
+\setcounter{subsection}{0}
+\setcounter{figure}{0}
+\setcounter{table}{0}
+Day la phan sinh vien tu phat trien nhu: Xay dung thuat toan, Xay dung chuong trinh mo phong tinh toan, thiet ke, chay thu ket qua,...
+\subsection{Cach chen anh}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=16cm, height=4.39cm]{Images/so_do_khoi.png}
+    \caption[So do khoi cua he thong]{\bfseries \fontsize{12pt}{0pt}\selectfont So do khoi cua he thong}
+    \label{hinh31}
+\end{figure}
+Hinh \ref{hinh31} la vi du ve cach chen anh. Luu y chu thich cua hinh ve duoc dat ngay duoi hinh ve. Tat ca cac hinh ve phai duoc de cap den trong phan noi dung va phai duoc phan tich va binh luan.
+
+\subsection{Cach tao bang}
+\begin{table}[H]
+    \centering
+    \caption{\bfseries \fontsize{12pt}{0pt} \selectfont Ket qua thi nghiem}
+    \begin{tabularx}{0.85\textwidth}{|s|a|a|s|}
+        \hline
+        \bfseries Lan thi nghiem & \bfseries Dien ap do duoc\hspace{0.5cm}(mV) & \bfseries Dien ap tham chieu\hspace{0pt}(mV) & \bfseries Sai lech\hspace{0pt}(\%)\\ \hline
+             1 & & &\\ \hline
+             2 & & &\\ \hline
+             3 & & &\\ \hline
+           ... & & &\\ \hline
+    \end{tabularx}
+    \label{bang31}
+\end{table}
+Bang \ref{bang31} la vi du ve cach tao bang. Luu y chu thich cua bang duoc dat o truoc bang. Tat ca cac bang bieu phai duoc de cap den trong phan noi dung va phai duoc phan tich va binh luan
+
+%Funciton
+\subsection{Cach viet phuong trinh}
+\begin{equation} \label{pt31}
+    F(x) = \int^a_b \frac{1}{3}x^3
+\end{equation}
+Phuong trinh \ref{pt31} la vi du ve phuong trinh tich phan
+
+Thu phuong trinh khac
+\begin{equation} \label{pt32}
+    x[t_n] = \frac{1}{\sqrt{N}} \sum_{k=0}^{N-1}x[f_k]e^{j 2\pi n k/N}
+\end{equation}
+Phuong trinh \ref{pt32} the hien phep bien doi Fourier roi rac nguoc (IDFT).
+
+%Dinh ly
+\subsection{Cach viet dinh nghia, dinh ly, he qua, bo de,...}
+Dinh ly lay mau Nyquist-Shannon la mot dinh ly duoc su dung trong linh vuc ly thuyet thong tin, dac biet la trong vien thong va xu ly tin hieu
+\begin{theorem} \label{dlNq}
+Mot ham so tin hieu $x(t_n)$ khong hua bat ky thanh phan tan so nao lon hon hoac bang mot gia tri $f_m$ co the bieu dien chinh xac bang tap cac gia tri cua no voi chu ky lay mau la $T=1/(2f_m) $     
+\end{theorem}
+Dinh ly \ref{dlNq} thuong duoc goi don gian la dinh ly lay mau
+
+%He qua
+\begin{corollary} \label{coro1}
+This is something here about corollary.
+\end{corollary}
+He qua \ref{coro1} gi do
+
+%Bo de
+\begin{lemma} \label{lemma1}
+day la noi dung bo de.
+\end{lemma}
+Bo de \ref{lemma1} gi do gi do gi do
+
+%Dinh nghia
+\begin{defn} \label{defn1}
+Dinh nghia gi do gi do
+\end{defn}
+Dinh nghia \ref{defn1} noi ve gi do ....
+\newpage
+
+%CHAPTER 4
+\section*{CHUONG 4. THI NGHIEM VA KET QUA}
+\addcontentsline{toc}{section}{\numberline{} CHUONG 4. THI NGHIEM VA KET QUA}
+\setcounter{section}{4}
+\setcounter{subsection}{0}
+\setcounter{figure}{0}
+\setcounter{table}{0}
+\lipsum
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=16cm, height=6cm]{Images/5g.jpg}
+    \caption[Mang 5g]{\bfseries \fontsize{12pt}{0pt}\selectfont Mang di dong the he thu 5}
+    \label{hinh41}
+\end{figure}
+Hinh \ref{hinh41} la vi du ve cach chen anh. Luu y chu thich cua hinh ve duoc dat ngay duoi hinh ve. Tat ca cac hinh ve phai duoc de cap den trong phan noi dung va phai duoc phan tich va binh luan.
+\clearpage
+
+%CONCLUSION
+\section*{CONCLUSION}
+\phantomsection \addcontentsline{toc}{section}{\numberline {} CONCLUSION}
+\subsection*{Ket luan chung}
+\phantomsection \addcontentsline{toc}{section}{\numberline {} Ket luan chung}
+Ket luan chung cho cac chuong trong do an. Muc nay can nhan manh nhung van de da giai quyet va van de chua giai quyet de dua ra cac danh gia ve muc do hoan thanh cong viec. Danh gia nay thuong bao gom viec so sanh ket qua thu duoc voi muc tieu de ra ban dau.
+\subsection*{Huong phat trien}
+\phantomsection \addcontentsline{toc}{section}{\numberline {} Huong phat trien}
+(Neu co)
+\subsection*{Kien nghi va de xuat}
+\phantomsection \addcontentsline{toc}{section}{\numberline {} Kien nghi va de xuat}
+(Neu co)
+\cleardoublepage
+
+%REFERENCES
+\phantomsection \addcontentsline{toc}{section}{\numberline {} REFERENCES}
+\bibliographystyle{IEEEtran}
+\bibliography{references}
+\cleardoublepage
+
+%APPENDIX
+\section*{APPENDIX}
+%Code
+\phantomsection \addcontentsline{toc}{section}{\numberline {} APPENDIX}
+\texttt{\fontsize{10pt}{0pt}\selectfont Ma nguon chuong trinh neu co thi se duoc dua vao day, su dung fonr courier New co 10pt}
+
+
+\end{document}

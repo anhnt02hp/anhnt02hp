@@ -1,0 +1,65 @@
+\usepackage[utf8]{inputenc} 
+\usepackage[fontsize=13pt]{scrextend} %Font size
+\usepackage[paperheight=29.7cm, paperwidth=21cm, right=2cm, left=3cm, top=2cm, bottom=2.5cm]{geometry} %Can le
+\usepackage{mathptmx} %Time-New-Roman
+\usepackage{graphicx} %Allow insert image
+\usepackage{float} %Set insert image location
+\usepackage{tikz} %draw cover frame
+\usetikzlibrary{calc} %tikz library
+
+\usepackage{indentfirst} %Thu vien thut dau dong
+\renewcommand{\baselinestretch}{1.2} %Gian dong 1.2
+\setlength{\parskip}{6pt} %Gian dong giua cac doan van
+\setlength{\parindent}{1cm} %Set khoang cach thut dau dong moi doan
+
+\usepackage{titlesec} %Thu vien set up cac kieu chu
+%Heading 1
+\titlespacing*{\section}{0pt}{0pt}{30pt} 
+\titleformat*{\section}{\fontsize{16pt}{0pt}\selectfont \bfseries \centering}
+%Heading 2
+\titlespacing*{\subsection}{0pt}{10pt}{0pt} 
+\titleformat*{\subsection}{\fontsize{14pt}{0pt}\selectfont \bfseries}
+%Heading 3
+\titlespacing*{\subsubsection}{0pt}{10pt}{0pt} 
+\titleformat*{\subsubsection}{\fontsize{13pt}{0pt}\selectfont \bfseries \itshape}
+%Heading 4
+\setcounter{secnumdepth}{4}
+\titlespacing*{\paragraph}{0pt}{10pt}{0pt} 
+\titleformat*{\paragraph}{\fontsize{13pt}{0pt}\selectfont \itshape}
+
+
+%Figure
+\renewcommand{\figurename}{\fontsize{12pt}{0pt}\selectfont \bfseries Figure}
+\renewcommand{\thefigure}{\thesection.\arabic{figure}}
+\usepackage{caption}
+\captionsetup[figure]{labelsep=space} %Xoa dau :
+
+%Table
+\renewcommand{\tablename}{\fontsize{12pt}{0pt}\selectfont \bfseries Table}
+\renewcommand{\thetable}{\thesection.\arabic{table}}
+\usepackage{caption}
+\captionsetup[table]{labelsep=space} %Xoa dau :
+
+\usepackage{tabularx}
+\newcolumntype{s}{>{\hsize=.4\hsize\centering\arraybackslash}X}
+\newcolumntype{a}{>{\hsize=1.1\hsize\centering\arraybackslash}X}
+
+%Function
+\renewcommand{\theequation}{\thesection.\arabic{equation}} %Thay doi danh so function
+
+%Theorem
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{defn}[theorem]{Definition}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{lemma}[theorem]{Lemma}
+
+\usepackage{lipsum} %Thu vien tao chu linh tinh
+
+%Viet hoa
+% \renewcommand{\contentsname}{CONTENTS}
+% \renewcommand{\listfigurename}{LIST OF FIGURES}
+% \renewcommand{\listtablename}{LIST OF TABLES}
+% \renewcommand{\refname}{REFERENCES}
+
+%Auto go to
+\usepackage[unicode]{hyperref}
